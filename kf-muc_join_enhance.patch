@@ -1,0 +1,56 @@
+--- kf-0.5.1/data/muc_join.glade	2005-01-08 13:01:21.000000000 +0100
++++ fix/kf-0.5.1/data/muc_join.glade	2005-02-26 05:10:05.041604536 +0100
+@@ -9,6 +9,8 @@
+   <property name="type">GTK_WINDOW_TOPLEVEL</property>
+   <property name="window_position">GTK_WIN_POS_NONE</property>
+   <property name="modal">False</property>
++  <property name="default_width">450</property>
++  <property name="default_height">250</property>
+   <property name="resizable">True</property>
+   <property name="destroy_with_parent">False</property>
+   <property name="decorated">True</property>
+@@ -66,7 +68,7 @@
+ 	      <child>
+ 		<widget class="GtkHButtonBox" id="hbuttonbox2">
+ 		  <property name="visible">True</property>
+-		  <property name="layout_style">GTK_BUTTONBOX_DEFAULT_STYLE</property>
++		  <property name="layout_style">GTK_BUTTONBOX_START</property>
+ 		  <property name="spacing">0</property>
+ 
+ 		  <child>
+@@ -222,7 +224,7 @@
+ 		  <property name="max_length">0</property>
+ 		  <property name="text" translatable="yes"></property>
+ 		  <property name="has_frame">True</property>
+-		  <property name="invisible_char" translatable="yes">*</property>
++		  <property name="invisible_char">*</property>
+ 		  <property name="activates_default">False</property>
+ 		</widget>
+ 		<packing>
+@@ -243,7 +245,7 @@
+ 		  <property name="max_length">0</property>
+ 		  <property name="text" translatable="yes"></property>
+ 		  <property name="has_frame">True</property>
+-		  <property name="invisible_char" translatable="yes">*</property>
++		  <property name="invisible_char">*</property>
+ 		  <property name="activates_default">False</property>
+ 		</widget>
+ 		<packing>
+@@ -264,7 +266,7 @@
+ 		  <property name="max_length">0</property>
+ 		  <property name="text" translatable="yes"></property>
+ 		  <property name="has_frame">True</property>
+-		  <property name="invisible_char" translatable="yes">*</property>
++		  <property name="invisible_char">*</property>
+ 		  <property name="activates_default">False</property>
+ 		</widget>
+ 		<packing>
+@@ -286,7 +288,7 @@
+ 		  <property name="max_length">0</property>
+ 		  <property name="text" translatable="yes"></property>
+ 		  <property name="has_frame">True</property>
+-		  <property name="invisible_char" translatable="yes">*</property>
++		  <property name="invisible_char">*</property>
+ 		  <property name="activates_default">False</property>
+ 		</widget>
+ 		<packing>
