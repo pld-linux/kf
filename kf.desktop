@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=kf
+GenericName=Komunikator Fisha
+Comment=Simple Jabber client
+Comment[pl]=Prosty klient Jabbera
+Exec=kfisha
+Icon=kf.png
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=GTK;Network;InstantMessaging;
+Encoding=UTF-8
+# vi: encoding=utf-8
