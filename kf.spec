@@ -17,6 +17,7 @@ Patch2:		%{name}-chat_gtkentry_fix.patch
 URL:		http://kf.jabberstudio.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gtk+2-devel >= 1:2.0.0
 %{?with_gtkspell:BuildRequires:	gtkspell-devel >= 2.0.5}
 BuildRequires:	intltool
