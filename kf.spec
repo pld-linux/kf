@@ -1,15 +1,13 @@
-# TODO:
-# - .desktop
-#
 Summary:	Simple Jabber client
 Summary(pl):	Prosty klient Jabbera
 Name:		kf
-Version:	0.1.7
+Version:	0.1.7.1
 Release:	0.1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://www.habazie.rams.pl/kf/files/%{name}-%{version}.tar.gz
 # Source0-md5:	71d692f735752d061d39aca1529da8c6
+Source1:	%{name}.desktop
 URL:		http://www.habazie.rams.pl/kf/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -44,8 +42,14 @@ intltoolize --copy --force
 %install
 rm -rf $RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+install data/%{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+mv $RPM_BUILD_ROOT/%{_bindir}/%{name} $RPM_BUILD_ROOT/%{_bindir}/%{name}isha
 
 %find_lang %{name} --all-name
 
@@ -57,3 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/kf
+%{_desktopdir}/*
+%{_pixmapsdir}/*
