@@ -2,7 +2,7 @@ Summary:	Simple Jabber client
 Summary(pl):	Prosty klient Jabbera
 Name:		kf
 Version:	0.2
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://www.habazie.rams.pl/%{name}/files/%{name}-%{version}.tar.gz
