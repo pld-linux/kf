@@ -4,13 +4,13 @@
 Summary:	Simple Jabber client
 Summary(pl):	Prosty klient Jabbera
 Name:		kf
-Version:	0.1.3
+Version:	0.1.4
 Release:	0.1
 License:	GPL v2
 Group:		Applications/Communications
-Source0:	http://beta.jabberpl.org/komunikatory/kf/download/%{name}-%{version}.tar.gz
-# Source0-md5:	3f8a37497215ea384eb2815da21dda7c
-URL:		http://beta.jabberpl.org/komunikatory/kf/
+Source0:	http://www.habazie.rams.pl/kf/files/%{name}-%{version}.tar.gz
+# Source0-md5:	77861323d26c797ed5940e14fb2d196d
+URL:		http://www.habazie.rams.pl/kf/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel
