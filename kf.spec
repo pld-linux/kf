@@ -1,13 +1,15 @@
 Summary:	Simple Jabber client
 Summary(pl):	Prosty klient Jabbera
 Name:		kf
-Version:	0.5
+Version:	0.5.1
 Release:	1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://kf.jabberstudio.org/files/%{name}-%{version}.tar.gz
-# Source0-md5:	8bd7c617ed30539007986bc489e87181
+# Source0-md5:	a3332bf6ea48199b04bd279f635d1d90
 Patch0:		%{name}-desktop.patch
+Patch1:		%{name}-muc_join_enhance.patch
+Patch2:		%{name}-chat_gtkentry_fix.patch
 URL:		http://kf.jabberstudio.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -24,12 +26,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Kf Jabber Client is a simple Jabber IM client using GTK+2 Toolkit.
 
 %description -l pl
-KF Jabber Client jest prostym klientem Jabbera u¿ywaj±cym biblioteki
+Kf Jabber Client jest prostym klientem Jabbera u¿ywaj±cym biblioteki
 GTK+2.
 
 %prep
 %setup -q
-%patch0
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
 glib-gettextize --copy --force
