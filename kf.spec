@@ -11,12 +11,12 @@ Group:		Applications/Communications
 Source0:	http://beta.jabberpl.org/komunikatory/kf/download/%{name}-%{version}.tar.gz
 # Source0-md5:	3f8a37497215ea384eb2815da21dda7c
 URL:		http://beta.jabberpl.org/komunikatory/kf/
-BuildRequires:  autoconf
-BuildRequires:  automake
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gtk+2-devel
-BuildRequires:  intltool
+BuildRequires:	intltool
 BuildRequires:	libglade2-devel
-BuildRequires:  libtool
+BuildRequires:	libtool
 BuildRequires:	loudmouth-devel >= 0.15.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
