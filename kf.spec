@@ -9,7 +9,7 @@ Release:	0.1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://www.habazie.rams.pl/kf/files/%{name}-%{version}.tar.gz
-# Source0-md5:	77861323d26c797ed5940e14fb2d196d
+# Source0-md5:	f92ed71670d42b2bf2e8c6485d7270ec
 URL:		http://www.habazie.rams.pl/kf/
 BuildRequires:	autoconf
 BuildRequires:	automake
