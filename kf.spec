@@ -1,20 +1,20 @@
 Summary:	Simple Jabber client
 Summary(pl):	Prosty klient Jabbera
 Name:		kf
-Version:	0.1.8
+Version:	0.2
 Release:	1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://www.habazie.rams.pl/%{name}/files/%{name}-%{version}.tar.gz
-# Source0-md5:	41838eb68bc84297e9594188fdb9c35a
+# Source0-md5:	61091daffbd03ef4eb3155df3abed0ca
 Source1:	%{name}.desktop
 URL:		http://www.habazie.rams.pl/kf/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 1:2.0
+BuildRequires:	gtk+2-devel >= 1:2.0.0
 BuildRequires:	gtkspell-devel >= 2.0.5
 BuildRequires:	intltool
-BuildRequires:	libglade2-devel >= 2.0
+BuildRequires:	libglade2-devel >= 2.0.0
 BuildRequires:	libtool
 BuildRequires:	loudmouth-devel >= 0.16
 BuildRequires:	pkgconfig
