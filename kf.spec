@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	gtkspell
+
 Summary:	Simple Jabber client
 Summary(pl):	Prosty klient Jabbera
 Name:		kf
@@ -14,7 +18,7 @@ URL:		http://kf.jabberstudio.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 1:2.0.0
-BuildRequires:	gtkspell-devel >= 2.0.5
+%{?with_gtkspell:BuildRequires:	gtkspell-devel >= 2.0.5}
 BuildRequires:	intltool
 BuildRequires:	libglade2-devel >= 2.0.0
 BuildRequires:	libtool
@@ -42,7 +46,7 @@ intltoolize --copy --force
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure --disable-gtkspell
 %{__make}
 
 %install
