@@ -1,13 +1,13 @@
 Summary:	Simple Jabber client
 Summary(pl):	Prosty klient Jabbera
 Name:		kf
-Version:	0.2
-Release:	2
+Version:	0.5
+Release:	1
 License:	GPL v2
 Group:		Applications/Communications
-Source0:	http://www.habazie.rams.pl/%{name}/files/%{name}-%{version}.tar.gz
-# Source0-md5:	61091daffbd03ef4eb3155df3abed0ca
-Source1:	%{name}.desktop
+Source0:	http://kf.jabberstudio.org/files/%{name}-%{version}.tar.gz
+# Source0-md5:	8bd7c617ed30539007986bc489e87181
+Patch0:		%{name}-desktop.patch
 URL:		http://www.habazie.rams.pl/kf/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -21,14 +21,15 @@ BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Komunikator Fisha is a simple Jabber client using GTK+2 Toolkit.
+Kf Jabber Client is a simple Jabber IM client using GTK+2 Toolkit.
 
 %description -l pl
-Komunikator Fisha jest prostym klientem Jabbera u¿ywaj±cym biblioteki
+KF Jabber Client jest prostym klientem Jabbera u¿ywaj±cym biblioteki
 GTK+2.
 
 %prep
 %setup -q
+%patch0
 
 %build
 glib-gettextize --copy --force
@@ -44,12 +45,12 @@ intltoolize --copy --force
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
+install kf.desktop $RPM_BUILD_ROOT%{_desktopdir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install data/%{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}
-install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 mv $RPM_BUILD_ROOT/%{_bindir}/%{name} $RPM_BUILD_ROOT/%{_bindir}/%{name}isha
 
 %find_lang %{name} --all-name
