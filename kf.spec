@@ -62,6 +62,8 @@ install kf.desktop $RPM_BUILD_ROOT%{_desktopdir}
 install data/%{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}
 mv $RPM_BUILD_ROOT/%{_bindir}/%{name} $RPM_BUILD_ROOT/%{_bindir}/%{name}isha
 
+rm -f $RPM_BUILD_ROOT%{_datadir}/%{name}/*.h
+
 %find_lang %{name} --all-name
 
 %clean
