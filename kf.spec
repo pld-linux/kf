@@ -17,6 +17,7 @@ BuildRequires:	intltool
 BuildRequires:	libglade2-devel >= 2.0
 BuildRequires:	libtool
 BuildRequires:	loudmouth-devel >= 0.16
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
