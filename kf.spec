@@ -1,16 +1,16 @@
 #
 # Conditional build:
-%bcond_without	gtkspell	# disable gtkspell support
+%bcond_with	gtkspell	# disable gtkspell support
 #
 Summary:	Simple Jabber client
 Summary(pl):	Prosty klient Jabbera
 Name:		kf
-Version:	0.5.2
+Version:	0.5.3
 Release:	1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://files.jabberstudio.org/kf/%{name}-%{version}.tar.gz
-# Source0-md5:	50340332fd025fe666e2bb536b111369
+# Source0-md5:	d0ea976fe5d409e3983dcdd444902134
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-muc_join_enhance.patch
 Patch2:		%{name}-chat_gtkentry_fix.patch
@@ -47,7 +47,7 @@ intltoolize --copy --force
 %{__autoconf}
 %{__automake}
 %configure \
-	%{!?with_gtkspell:--disable-gtkspell}
+	%{?with_gtkspell:--enable-gtkspell}
 %{__make}
 
 %install
