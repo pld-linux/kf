@@ -8,7 +8,7 @@ Group:		Applications/Communications
 Source0:	http://kf.jabberstudio.org/files/%{name}-%{version}.tar.gz
 # Source0-md5:	8bd7c617ed30539007986bc489e87181
 Patch0:		%{name}-desktop.patch
-URL:		http://www.habazie.rams.pl/kf/
+URL:		http://kf.jabberstudio.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 1:2.0.0
