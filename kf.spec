@@ -11,7 +11,7 @@ Source1:	%{name}.desktop
 URL:		http://www.habazie.rams.pl/kf/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 2.0
+BuildRequires:	gtk+2-devel >= 1:2.0
 BuildRequires:	gtkspell-devel >= 2.0.5
 BuildRequires:	intltool
 BuildRequires:	libglade2-devel >= 2.0
