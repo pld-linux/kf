@@ -1,10 +1,12 @@
---- kf.desktop	2005-02-23 20:48:15.000000000 +0100
-+++ fix/kf.desktop	2005-02-25 23:59:53.940405904 +0100
+--- kf.desktop	2005-02-26 06:06:49.807875040 +0100
++++ fix/kf.desktop	2005-02-26 06:01:23.460487384 +0100
 @@ -1,15 +1,17 @@
  [Desktop Entry]
 -Encoding=UTF-8
- Name=kf jabber client
- Name[pl]=kf klient sieci jabber
+-Name=kf jabber client
+-Name[pl]=kf klient sieci jabber
++Name=kf linux jabber client
++Name[pl]=kf linux jabber client
  Name[lt]=Pokalbių programa kf
  GenericName=Instant Messenger
  GenericName[pl]=Komunikator Internetowy
