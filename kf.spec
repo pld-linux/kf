@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_with	gtkspell	# disable gtkspell support
+%bcond_with	gtkspell	# enable gtkspell support
 #
 Summary:	Simple Jabber client
 Summary(pl):	Prosty klient Jabbera
