@@ -1,12 +1,12 @@
 Summary:	Simple Jabber client
 Summary(pl):	Prosty klient Jabbera
 Name:		kf
-Version:	0.1.7.1
-Release:	0.1
+Version:	0.1.8
+Release:	1
 License:	GPL v2
 Group:		Applications/Communications
-Source0:	http://www.habazie.rams.pl/kf/files/%{name}-%{version}.tar.gz
-# Source0-md5:	e6e34bac2fe5c304f65be06fa1dcc505
+Source0:	http://www.habazie.rams.pl/%{name}/files/%{name}-%{version}.tar.gz
+# Source0-md5:	41838eb68bc84297e9594188fdb9c35a
 Source1:	%{name}.desktop
 URL:		http://www.habazie.rams.pl/kf/
 BuildRequires:	autoconf
@@ -47,7 +47,7 @@ install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install data/%{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
+install data/%{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 mv $RPM_BUILD_ROOT/%{_bindir}/%{name} $RPM_BUILD_ROOT/%{_bindir}/%{name}isha
 
@@ -58,8 +58,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/kf
+%{_datadir}/%{name}
 %{_desktopdir}/*
 %{_pixmapsdir}/*
