@@ -1,7 +1,7 @@
 #
 # Conditional build:
-%bcond_without	gtkspell
-
+%bcond_without	gtkspell	# disable gtkspell support
+#
 Summary:	Simple Jabber client
 Summary(pl):	Prosty klient Jabbera
 Name:		kf
@@ -46,13 +46,14 @@ intltoolize --copy --force
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure --disable-gtkspell
+%configure \
+	%{!?with_gtkspell:--disable-gtkspell}
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
+
 install kf.desktop $RPM_BUILD_ROOT%{_desktopdir}
 
 %{__make} install \
