@@ -5,15 +5,14 @@
 Summary:	Simple Jabber client
 Summary(pl):	Prosty klient Jabbera
 Name:		kf
-Version:	0.5.3
+Version:	0.5.4
 Release:	1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://files.jabberstudio.org/kf/%{name}-%{version}.tar.gz
-# Source0-md5:	d0ea976fe5d409e3983dcdd444902134
+# Source0-md5:	c11dbc1c5873b405f5df65e72f8fc879
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-muc_join_enhance.patch
-Patch2:		%{name}-chat_gtkentry_fix.patch
 URL:		http://kf.jabberstudio.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -38,9 +37,9 @@ GTK+2.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
+export LDFLAGS="$LDFLAGS -export-dynamic -g"
 glib-gettextize --copy --force
 %{__libtoolize}
 intltoolize --copy --force
