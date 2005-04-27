@@ -5,12 +5,12 @@
 Summary:	Simple Jabber client
 Summary(pl):	Prosty klient Jabbera
 Name:		kf
-Version:	0.5.4
+Version:	0.5.4.1
 Release:	1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://files.jabberstudio.org/kf/%{name}-%{version}.tar.gz
-# Source0-md5:	c11dbc1c5873b405f5df65e72f8fc879
+# Source0-md5:	f963f289b7a1221f192a540fbda5cd55
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-muc_join_enhance.patch
 URL:		http://kf.jabberstudio.org/
