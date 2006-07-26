@@ -40,9 +40,9 @@ GTK+2.
 
 %build
 export LDFLAGS="$LDFLAGS -export-dynamic -g"
-glib-gettextize --copy --force
+%{__glib_gettextize}
 %{__libtoolize}
-intltoolize --copy --force
+%{__intltoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
@@ -60,7 +60,7 @@ install kf.desktop $RPM_BUILD_ROOT%{_desktopdir}
 	DESTDIR=$RPM_BUILD_ROOT
 
 install data/%{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}
-mv $RPM_BUILD_ROOT/%{_bindir}/%{name} $RPM_BUILD_ROOT/%{_bindir}/%{name}isha
+mv $RPM_BUILD_ROOT%{_bindir}/%{name} $RPM_BUILD_ROOT/%{_bindir}/%{name}isha
 
 rm -f $RPM_BUILD_ROOT%{_datadir}/%{name}/*.h
 
