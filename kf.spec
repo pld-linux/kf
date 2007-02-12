@@ -3,7 +3,7 @@
 %bcond_with	gtkspell	# enable gtkspell support
 #
 Summary:	Simple Jabber client
-Summary(pl):	Prosty klient Jabbera
+Summary(pl.UTF-8):   Prosty klient Jabbera
 Name:		kf
 Version:	0.5.4.1
 Release:	1
@@ -29,8 +29,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Kf Jabber Client is a simple Jabber IM client using GTK+2 Toolkit.
 
-%description -l pl
-Kf Jabber Client jest prostym klientem Jabbera u¿ywaj±cym biblioteki
+%description -l pl.UTF-8
+Kf Jabber Client jest prostym klientem Jabbera uÅ¼ywajÄ…cym biblioteki
 GTK+2.
 
 %prep
