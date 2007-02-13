@@ -3,7 +3,7 @@
 %bcond_with	gtkspell	# enable gtkspell support
 #
 Summary:	Simple Jabber client
-Summary(pl.UTF-8):   Prosty klient Jabbera
+Summary(pl.UTF-8):	Prosty klient Jabbera
 Name:		kf
 Version:	0.5.4.1
 Release:	1
